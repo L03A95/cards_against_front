@@ -1,0 +1,13 @@
+.card {
+    height: 200px;
+    width: 140px;
+    margin: 20px;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 2px 2px 3px #aaa;
+}
+
+.card__text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+ }
