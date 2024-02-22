@@ -20,8 +20,8 @@ export default function Home ({socket} : {socket : any}) {
     function createLobby () {
         if (flag) {
             axios.post('http://localhost:3001/newLobby', {
-                admin: name
-            })
+                user: name, admin: true
+            }).then(res => console.log(res.data))
         }
     }
 
