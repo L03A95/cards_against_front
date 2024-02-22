@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import axios from "axios"
 
 
 export default function Home ({socket} : {socket : any}) {
@@ -18,7 +19,9 @@ export default function Home ({socket} : {socket : any}) {
 
     function createLobby () {
         if (flag) {
-            socket.emit('newLobby', 'Sala nueva creada de ' + name)
+            axios.post('http://localhost:3001/newLobby', {
+                admin: name
+            })
         }
     }
 
